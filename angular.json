@@ -16,8 +16,13 @@
             "main": "src/main.ts",
             "tsConfig": "./tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets", "src/favicon.ico"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "styles": [
+              "src/assets/css/style.css"
+            ],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
@@ -71,14 +76,22 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "./tsconfig.spec.json",
             "scripts": [],
-            "styles": ["src/styles.scss"],
-            "assets": ["src/assets", "src/favicon.ico"]
+            "styles": [
+              "src/assets/css/style.css"
+            ],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }

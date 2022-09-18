@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
+import { FooterComponent } from './footer/footer.component';
 
 export function appInitializerFactory(authService: AuthService) {
   return () => authService.checkTheUserOnTheFirstLoad();
@@ -24,7 +25,7 @@ export function appInitializerFactory(authService: AuthService) {
     SharedModule,
     AppRoutingModule,
   ],
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
