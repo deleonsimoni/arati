@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -6,13 +6,14 @@ import { merge, Observable } from 'rxjs';
 
 import { User } from './shared/interfaces';
 import { AuthService } from './shared/services';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   user$: Observable<User | null> = merge(
     // Init on startup
     this.authService.me(),
@@ -26,6 +27,10 @@ export class AppComponent {
     private authService: AuthService
   ) {
     this.registerSvgIcons();
+  }
+
+  ngOnInit() {
+    AOS.init();
   }
 
   registerSvgIcons() {
