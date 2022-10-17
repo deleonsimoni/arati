@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
 import { FooterComponent } from './footer/footer.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { PericiaJudicialAmbientalComponent } from './cursos/pericia-judicial-ambiental/pericia-judicial-ambiental.component';
 
 export function appInitializerFactory(authService: AuthService) {
   return () => authService.checkTheUserOnTheFirstLoad();
@@ -24,8 +26,9 @@ export function appInitializerFactory(authService: AuthService) {
     HttpClientModule,
     SharedModule,
     AppRoutingModule,
+    YouTubePlayerModule
   ],
-  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, PericiaJudicialAmbientalComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -46,4 +49,4 @@ export function appInitializerFactory(authService: AuthService) {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

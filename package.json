@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^14.1.2",
     "@angular/platform-browser-dynamic": "^14.1.2",
     "@angular/router": "^14.1.2",
+    "@angular/youtube-player": "^14.2.5",
     "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
     "bcrypt": "^5.0.1",

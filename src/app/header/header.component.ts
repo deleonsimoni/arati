@@ -13,10 +13,24 @@ import { AuthService } from '@app/shared/services';
 export class HeaderComponent {
   @Input() user: User | null = null;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthService) { }
 
   logout(): void {
     this.authService.signOut();
     this.router.navigateByUrl('/auth/login');
+  }
+
+  public loadScript() {
+    let body = <HTMLDivElement>document.body;
+    let script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = "../../assets/js/main.js";
+    script.async = true;
+    script.defer = true;
+    body.appendChild(script);
+  }
+
+  ngAfterViewInit() {
+    this.loadScript();
   }
 }
