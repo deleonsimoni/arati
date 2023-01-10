@@ -14,6 +14,24 @@
     color: inherit;
 }
 
+.button-curso {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #44551A;
+    border: 2px solid #44551A;
+}
+
+.button-curso:hover {
+    background: #a1b178;
+    color: #fff;
+}
+
 @media (max-width:767px) {
     .photo-gallery h2 {
         margin-bottom: 25px;
