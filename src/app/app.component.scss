@@ -1,2 +1,30 @@
-.wrapper-app {
+.wrapper-app {}
+
+/* Banner */
+.banner {
+    background: white;
+    box-shadow: 0 0 5px 1px rgba(black, 0.3);
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    p {
+        margin-bottom: 1rem;
+
+        &>button {
+            background: none;
+            border: none;
+            font: inherit;
+            padding: 0;
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
 }

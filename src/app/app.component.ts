@@ -14,6 +14,9 @@ import * as AOS from 'aos';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+
+  showModal = true;
+
   user$: Observable<User | null> = merge(
     // Init on startup
     this.authService.me(),
@@ -31,6 +34,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     AOS.init();
+  }
+
+  desabilitarModal() {
+    this.showModal = false;
   }
 
   registerSvgIcons() {

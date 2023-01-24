@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './shared/guards';
 import { HomeComponent } from './home/home.component';
 import { PericiaJudicialAmbientalComponent } from './cursos/pericia-judicial-ambiental/pericia-judicial-ambiental.component';
+import { PoliticaPrivacidadeComponent } from './politica-privacidade/politica-privacidade.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'pericia-judicial-ambiental',
     component: PericiaJudicialAmbientalComponent,
+    // canActivate: [AuthGuard],
+  },
+  {
+    path: 'politica-privacidade',
+    component: PoliticaPrivacidadeComponent,
     // canActivate: [AuthGuard],
   },
   {

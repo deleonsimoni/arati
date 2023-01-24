@@ -15,6 +15,7 @@ import { AuthService } from './shared/services';
 import { FooterComponent } from './footer/footer.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { PericiaJudicialAmbientalComponent } from './cursos/pericia-judicial-ambiental/pericia-judicial-ambiental.component';
+import { PoliticaPrivacidadeComponent } from './politica-privacidade/politica-privacidade.component';
 
 export function appInitializerFactory(authService: AuthService) {
   return () => authService.checkTheUserOnTheFirstLoad();
@@ -28,7 +29,7 @@ export function appInitializerFactory(authService: AuthService) {
     AppRoutingModule,
     YouTubePlayerModule
   ],
-  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, PericiaJudicialAmbientalComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, PericiaJudicialAmbientalComponent, PoliticaPrivacidadeComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

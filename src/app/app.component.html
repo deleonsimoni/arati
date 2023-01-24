@@ -1,4 +1,16 @@
 <app-header [user]="user$ | async"></app-header>
+<div class="banner" *ngIf="showModal">
+  <p>Nosso site utiliza cookies em sua navegação.</p>
+  <button type="button" (click)="desabilitarModal()" id="accept-button" class="button"
+    style="margin-right: 5px;">Aceito</button>
+
+  <button type="button" id="accept-button" class="button">
+    <a [routerLink]="['/politica-privacidade']" queryParamsHandling="preserve" target="_blank">
+      Acessar Política de privacidade
+    </a>
+  </button>
+
+</div>
 <div class="wrapper-app">
   <router-outlet></router-outlet>
 </div>
