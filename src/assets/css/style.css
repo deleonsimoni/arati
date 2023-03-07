@@ -474,7 +474,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f7fbfe;
+  background-color: #c0d391;
 }
 
 .section-title {
@@ -707,7 +707,7 @@ section {
 .services .icon-box::before {
   content: "";
   position: absolute;
-  background: #e1f0fa;
+  background: #DA8101;
   right: -60px;
   top: -40px;
   width: 100px;
@@ -761,6 +761,7 @@ section {
 }
 
 .services .icon-box:hover .title a,
+.services .icon-box:hover .title,
 .services .icon-box:hover .description {
   color: #fff;
 }
@@ -920,7 +921,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #e1f0fa;
+  color: #DA8101;
   font-size: 26px;
 }
 
@@ -1627,4 +1628,14 @@ section {
 
 #footer .footer-links a:hover {
   color: #44551A;
+}
+
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
 }
